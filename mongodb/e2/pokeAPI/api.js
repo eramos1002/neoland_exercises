@@ -1,4 +1,12 @@
-const arrayFlatten = require("array-flatten");
+const express = require("express");
+const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
+const Pokemon = require("./models/pokemon");
+
+
+const api
+
+/*const arrayFlatten = require("array-flatten");
 const express = require("express");
 const fs = require("fs");
 const bodyParser = require("body-parser"); //configura nuestra api para que decodifique los posibles body q vengan
@@ -223,14 +231,15 @@ api.get("/api/pokemons/:id", (request, response) => {
     });
 });*/
 /* otro resultado PUT*/
-api.put("/api/pokemons/:id", (request, response) => {
+/*api.put("/api/pokemons/:id", (request, response) => {
     fs.readFile(dbPokemon, (err, data) => {
         if (err) throw err;
         const allPokemonsUpdate = JSON.parse(data);
         allPokemonsUpdate.forEach((pokemon) => {
             if (pokemon.id === Number.parseInt(request.params.id)) {
-                /*if (request.body.type)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            pokemon.type =request.body.type;*/
-                pokemon.type = request.body.type ? request.body.type : pokemon.type;
+                /*if (request.body.type)   */
+pokemon.type = request.body.type; * /
+/*pokemon.type = request.body.type ? request.body.type : pokemon.type;
                 pokemon.name = request.body.name ? request.body.name : pokemon.name;
             }
         });
@@ -245,10 +254,10 @@ api.put("/api/pokemons/:id", (request, response) => {
             });
         });
     });
-});
+});*/
 
 //GET PAGINADO
-api.get("/api/pokemons/page/:page", (request, response) => {
+/*api.get("/api/pokemons/page/:page", (request, response) => {
     fs.readFile(dbPokemon, (err, data) => {
         const allPokemons = JSON.parse(data);
         const PAGE_SIZE = 5;
@@ -317,6 +326,6 @@ api.get(
 
 api.listen(1010, () => {
     console.log("POKEAPI corriendo en puerto 1010");
-});
+});*/
 
 //NUEVOS CAMBIOS
